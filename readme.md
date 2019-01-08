@@ -106,7 +106,8 @@ requestId | string | 创建成功的流程编号
 
 字段       |字段类型      |必填  |字段说明
 ------------|-----------|:-----------:|------
-workcode | strig | √ | 员工编号
+requestId | string | | 流程编号, 该参数不为空的时候，重新提交到该流程；用于被回退的流程
+workcode | string | √ | 员工编号
 description | string | √ | 流程标题
 mainMap | object(map) | √ | 主表数据
 
@@ -201,6 +202,11 @@ result | integer | 流程结果 0: 成功 其它: 失败
 nodesLog | object | 节点运行的情况
 requestId | string | 流程 id
 
+##### nodesLog 参数
+
+字段       |字段类型      |字段说明
+-----------|-----------|------
+remark | string | 如果流程被回退，该字段为回退批注
 
 ### 3.3 费用报销申请流程回传
 #### 3.3.1 回传参数
