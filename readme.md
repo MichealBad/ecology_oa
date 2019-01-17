@@ -1,3 +1,12 @@
+## 部署说明
+
+- 拷贝代码到本地: git clone http://47.104.165.194:3000/yhglobal.com/YHWeaver.git
+- 进入 src/main 下，使用 maven 构建项目: mvn clean install
+- 将构建好的 war (crm 项目下的 target) 放置于 tomcat 目录的 webapps/ROOT/ 下
+- 启动 tomcat : ./bin/startup.sh
+- 关闭 tomcat 的时候，最好用 kill -9 PID 杀掉(ps -aux\|grep eas_proxy 可以查到 PID)。
+
+
 
 # 泛微 OA 接口说明
 
